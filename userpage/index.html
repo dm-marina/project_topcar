@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopCar</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+<section class="about">
+    <div class="wrapper">
+    <header class="header">
+        <div class="logo">
+            <a href="../landing/index.html" class="logo-topcar">
+                <img src="./images/logo.svg" width="258px" height="91px" class="logo-img">
+            </a>
+            <a href="../landing/index.html" class="logo-text"><bold>|</bold> сторінка користувача</a>
+        </div>
+        <div class="header-content">
+            <div class="inform">
+                <div class="lang-container">
+                    <a href="./" class="lang lang-active">ук</a>
+                    <a href="./" class="lang">ру</a>
+                    <a href="./" class="lang">en</a>
+                </div>
+                <address class="address">Одеса, вул. Садова 8</address>
+                <a href="tel:+38(040) 256 558 12" class="tel">+38(040) 256 558 12</a>
+                <a href="./" class="facebook img-fb fb"></a>
+                <button class="user-menu" id="menu-open">
+                    <img src="../landing/images/user-btn.png" width="29px" height="29px" class="menu-img">
+                </button>
+            </div>
+                <div class="user-menu-content" id="user-menu">
+                    <div class="heding-menu">
+                        <div class="logo-mini-container">
+                            <a href="../userpage/index.html" class="logo-mini">
+                                <img src="./images/user-mini.png" width="75px" height="75px" alt="logo-topcar" class="logi-mini-img">
+                            </a>
+                            <a href="../userpage/index.html" class="text-user">Перейти на сторінку користувача</a>
+                        </div>
+                        <button class="close" id="menu-close"></button>
+                    </div>
+                    <div class="enter">
+                        <h2 class="title-user">Вхід</h2>
+                        <input required type="email" class="input" placeholder="email">
+                        <input required type="text" class="input" placeholder="пароль">
+                        <div class="chb-container">
+                            <input type="checkbox" class="checkbox chb-img" id="remember-enter">
+                            <label class="label-chb" for="remember-enter">запам’ятати в системі</label>
+                        </div>
+                        <div class="btn-center">
+                            <button class="btn-standart">Увійти</button>
+                        </div>
+                    </div>
+                    <div class="registration">
+                        <h2 class="title-user">Реєстрація</h2>
+                        <input required type="text" class="input" placeholder="ім’я">
+                        <input required type="email" class="input" placeholder="email">
+                        <div class="chb-container">
+                            <input type="checkbox" class="checkbox chb-img" id="show-email">
+                            <label class="label-chb" for="show-email">показувати e-mail</label>
+                        </div>
+                        <input type="text" class="input" placeholder="пароль">
+                        <input type="tel" class="input" placeholder="номер телефону">
+                        <div class="chb-container">
+                            <input type="checkbox" class="checkbox chb-img" id="show-tel">
+                            <label class="label-chb" for="show-tel">показувати телефон</label>
+                        </div>
+                        <div class="chb-container">
+                            <input type="checkbox" class="checkbox chb-img" id="remember-registration">
+                            <label class="label-chb" for="remember-registration">запам’ятати в системі</label>
+                        </div>
+                        <div class="btn-center">
+                            <button class="btn-standart">Реєстрація</button>
+                        </div>
+                    </div>
+                </div>
+<!-- there js code -->
+<script>
+    const openButton=document.querySelector('#menu-open');
+    const closeButton=document.querySelector('#menu-close');
+
+    const menu=document.querySelector('#user-menu');
+    openButton.addEventListener('click', ()=>{
+    menu.classList.add('show-menu');
+
+    })
+    closeButton.addEventListener('click', ()=>{
+        menu.classList.remove('show-menu');
+    })
+
+</script>
+<!-- end js code -->
+            <div class="menu">
+                <a href="../about/index.html" class="link">про нас</a>
+                <a href="./" class="link">відгуки</a>
+                <a href="../contacts/index.html" class="link">контакти</a>
+                <a href="./" class="link">для розробників</a>
+            </div>
+        </div>
+    </header>
+    <div class="userpage-content">
+        <span class="user-img user"></span>
+        <h2 class="content-title">Вітаємо у Вашій персональній сторінці!</h2>
+        <div class="ul">
+            <p class="text">Тут Ви можете:</p>
+            <ul>
+                <li>
+                    <a href="" class="list" id="reviews">переглянути власні відгуки;</a>
+                </li>
+                <li>
+                    <a href="" class="list" id="new-review">написати новий відгук; </a>
+                </li>
+                <li> 
+                    <button class="list" id="show-replies">подивитися відповіді на ваші відгуки та кометарі;</button>
+                </li>
+                <li>
+                    <button class="list" id="update">редагувати власні дані;</button>
+                </li>
+                <li>
+                    <a href="../contacts/index.html" class="list" id="reclam">запропонувати розробникам співпрацю.</button>
+                </li>
+            </ul>
+             <!-- user update -->
+    <div class="user-update" id="user-update">
+        <div class="heding-menu">
+            <a href="#" class="logo-mini">
+                <img src="./images/user-mini.png" width="75px" height="75px" alt="logo-topcar" class="logi-mini-img">
+            </a>
+            <button class="close" id="update-close"></button>
+        </div>
+        <p class="photo-text">Змінити фото </p>
+        <form enctype="multipart/form-data" method="post" class="input-photo"> 
+            <p class="photo">
+                <input type="file" name="photo" multiple accept="image/*, image/png">
+                <input type="submit" class="btn-standart-mini" value="Надіслати">
+            </p>
+        </form>
+        <div class="update-content">
+            <input required type="text" class="input" placeholder="Змінити email">
+                <div class="chb-container">
+                    <input type="checkbox" class="checkbox chb-img" id="show-email">
+                    <label class="label-chb" for="show-email">показувати email</label>
+                </div>
+                <input required type="text" class="input" placeholder="Змінити телефон">
+                <div class="chb-container">
+                    <input type="checkbox" class="checkbox chb-img" id="show-tel">
+                    <label class="label-chb" for="show-tel">показувати телефон</label>
+                </div>
+                <div class="btn-center">
+                    <button class="btn-standart">Зберегти зміни</button>
+                </div>
+        </div>
+    </div>
+    <!-- end -->
+        </div>
+        <span class="auto-img auto"></span>
+    </div>
+    <!-- there js code -->
+    <script>
+        // for update
+    const openBtn=document.querySelector('#update');
+    const closeBtn=document.querySelector('#update-close');
+
+        const update=document.querySelector('#user-update');
+        
+        openBtn.addEventListener('click', ()=>{
+        update.classList.add('show-update');
+        })
+        closeBtn.addEventListener('click', ()=>{
+            update.classList.remove('show-update');
+        })
+    </script>
+<!-- end js code -->
+    </section>
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-contacts">
+                <address class="footer-addr">Одеса, вул. Садова 8</address>
+                <div class="contact-container">
+                    <a href="./" class="facebook-gray fb-gray"></a>
+                    <a href="tel:+38(040) 256 558 12" class="footer-tel">+38(040) 256 558 12</a>
+                </div>
+                <a href="mailto:contact@topcar.net" class="email">contact@topcar.net</a>
+            </div>
+            <p class="footer-inform">
+                @2021 автомобільний веб-сайт TopCar
+            </p>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>

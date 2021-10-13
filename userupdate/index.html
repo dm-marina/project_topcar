@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>User update</title>
+</head>
+<body>
+        <div class="user-update" id="user-update">
+            <div class="heding-menu">
+                <a href="#" class="logo-mini">
+                    <img src="./images/user-mini.png" width="75px" height="75px" alt="logo-topcar" class="logi-mini-img">
+                </a>
+                <button class="close" id="update-close"></button>
+            </div>
+            <form enctype="multipart/form-data" method="post" class="input-photo"> 
+                <p class="photo">
+                    <input type="file" name="photo" multiple accept="image/*, image/png">
+                    <input type="submit" class="btn-standart-mini" value="Надіслати">
+                </p>
+            </form>
+            <div class="update-content">
+                <input required type="text" class="input" placeholder="Змінити email">
+                    <div class="chb-container">
+                        <input type="checkbox" class="checkbox chb-img" id="show-email">
+                        <label class="label-chb" for="show-email">показувати email</label>
+                    </div>
+                    <input required type="text" class="input" placeholder="Змінити телефон">
+                    <div class="chb-container">
+                        <input type="checkbox" class="checkbox chb-img" id="show-tel">
+                        <label class="label-chb" for="show-tel">показувати телефон</label>
+                    </div>
+                    <div class="btn-center">
+                        <button class="btn-standart">Зберегти зміни</button>
+                    </div>
+            </div>
+        </div>
+</body>
+</html>
